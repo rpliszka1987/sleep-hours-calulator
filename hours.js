@@ -1,3 +1,6 @@
+// Sleep calculating simple code
+
+// Users sleep hours per day of the week.
 function getSleepHours(day) {
   switch (day) {
     case "monday":
@@ -27,6 +30,7 @@ function getSleepHours(day) {
   }
 }
 
+// Total of hours users sleeps per week
 function getActualSleepHours() {
   return (
     getSleepHours("monday") +
@@ -39,11 +43,13 @@ function getActualSleepHours() {
   );
 }
 
+// Perfect amount of sleep hours per week
 function getIdealSleepHours() {
   var idealHours = 8;
   return idealHours * 7;
 }
 
+// Function checks if user gets the recomended amount of sleep per week
 function calculateSleepDebt() {
   var actualSleepHours = getActualSleepHours();
   var idealSleepHours = getIdealSleepHours();
@@ -59,4 +65,5 @@ function calculateSleepDebt() {
   }
 }
 
+// Calling the function to run the code.
 calculateSleepDebt();
